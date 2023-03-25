@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Boss
+    uniqueID: 232742737
+    locked: 0
+  - name: Boss weapons
+    uniqueID: 3103142875
+    locked: 0

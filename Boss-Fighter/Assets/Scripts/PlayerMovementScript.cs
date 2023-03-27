@@ -26,7 +26,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 1 * jumpHeight);
         }
-        Debug.Log(transform.position.x);
+        //Debug.Log(transform.position.x);
     }
 
     public void playerMove()

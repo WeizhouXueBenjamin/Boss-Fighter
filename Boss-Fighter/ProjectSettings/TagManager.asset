@@ -44,6 +44,12 @@ TagManager:
   - name: Boss
     uniqueID: 232742737
     locked: 0
+  - name: Bullets
+    uniqueID: 1863865637
+    locked: 0
   - name: Boss weapons
     uniqueID: 3103142875
+    locked: 0
+  - name: Player
+    uniqueID: 1924517343
     locked: 0

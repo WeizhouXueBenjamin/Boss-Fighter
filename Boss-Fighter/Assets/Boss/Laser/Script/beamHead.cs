@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class beamHead : MonoBehaviour
 {
-    public float timer;
+    [SerializeField] private float timer;
     private int fireTime = 5;
     private int stopTime = 10;
     public Animator laserhead;

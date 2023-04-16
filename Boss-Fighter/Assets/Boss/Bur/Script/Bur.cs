@@ -36,6 +36,7 @@ public class Bur : MonoBehaviour
 
     private void blowUp()
     {
+        GameController.camShake.Shake();
         for (int i = 0; i < 8; i++)
         {
             Vector3 newRotation = new Vector3(0, 0, i * 45);

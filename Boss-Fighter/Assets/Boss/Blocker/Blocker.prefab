@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3987997254819495053}
   - component: {fileID: 3987997254819495051}
   - component: {fileID: 3987997254819495050}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Blocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockLaser: {fileID: 3987997255609092817}
-  blocker: {fileID: 3987997254819495054}
   coolDown: 4
   timer: 0
   moveSpeed: 3
@@ -137,7 +136,7 @@ GameObject:
   - component: {fileID: 3987997255609092814}
   - component: {fileID: 3987997255609092815}
   - component: {fileID: 3987997255609092816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: block
   m_TagString: Untagged
   m_Icon: {fileID: 0}

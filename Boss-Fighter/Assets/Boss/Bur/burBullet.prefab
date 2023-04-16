@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7221117117398916015}
   - component: {fileID: 122856428558792977}
   - component: {fileID: 7694346907070353954}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: burBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

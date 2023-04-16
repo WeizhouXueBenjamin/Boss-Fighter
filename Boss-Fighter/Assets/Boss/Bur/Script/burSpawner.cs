@@ -32,7 +32,6 @@ public class burSpawner : MonoBehaviour
             Vector3 startPoint = new Vector3(Random.Range(13, -13), transform.position.y, transform.position.z);
             endPoint = new Vector3(Random.Range(mostRightPoint, mostLeftPoint), Random.Range(highestPoint, lowestPoint), transform.position.z);
             Bur = Instantiate(bur, startPoint, transform.rotation);
-            Debug.Log(endPoint);
             timer = 0;
         }
         if (Bur)

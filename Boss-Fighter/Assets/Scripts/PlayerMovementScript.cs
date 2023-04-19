@@ -4,33 +4,48 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    public float jumpHeight = 50;
-    public float moveSpeed = 20;
-    //public LogicScript logic;
+    private float horizontal;
+    public float speed = 20f;
+    public float jump = 50f;
+    private bool isFacingRight = true;
 
-    // Start is called before the first frame update
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(rb.velocity.x, jump);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y == 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpHeight);
-        }
-        //Debug.Log(transform.position.x);
+
+        Flip();
     }
 
-    public void playerMove()
+    void FixedUpdate()
     {
+        rb.velocity = new Vector2(horizontal*speed, rb.velocity.y);
+    }
 
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0f, 180f, 0f);
+        }
     }
 }

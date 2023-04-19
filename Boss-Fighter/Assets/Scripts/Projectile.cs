@@ -6,8 +6,8 @@ public class Projectile : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float projectileSpeed = 30f;
-    public float deadZoneL = -60;
-    public float deadZoneR = 60;
+    public float deadZoneL = -30;
+    public float deadZoneR = 30;
     
 
     void Start()

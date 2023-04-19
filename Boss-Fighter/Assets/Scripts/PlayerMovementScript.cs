@@ -8,7 +8,7 @@ public class PlayerMovementScript : MonoBehaviour
     public float jumpHeight = 50;
     public float moveSpeed = 20;
     //public LogicScript logic;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,6 @@ public class PlayerMovementScript : MonoBehaviour
 
     public void playerMove()
     {
-        
+
     }
 }

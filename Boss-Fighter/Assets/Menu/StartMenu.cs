@@ -17,7 +17,7 @@ public class StartMenu : MonoBehaviour
 
     public void Join()
     {
-        SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void Quit()

@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float projectileSpeed = 30f;
     public float deadZoneL = -30;
     public float deadZoneR = 30;
+    public float projectileDamage = 10;
     
 
     void Start()
@@ -15,7 +16,6 @@ public class Projectile : MonoBehaviour
         rb.velocity = transform.right * projectileSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.x < deadZoneL || transform.position.x > deadZoneR)
@@ -26,11 +26,21 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        Debug.Log(hit.name);
         if (hit.name != "Player")
         {
             Destroy(gameObject);
         }
             
     }
+
+    /* uncomment when bosshealth script is implemented */
+    // private void OnCollisionEnter2D(Collider2D collision)
+    // {
+    //     var enemy = collision.collider.GetComponent<BossHealth>(); // temp name
+    //     if (enemy)
+    //     {
+    //         enemy.takeHit(projectileDamage);
+    //     }
+    //     Destroy(gameObject);
+    // }
 }

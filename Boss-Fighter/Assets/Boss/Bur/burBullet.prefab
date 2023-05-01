@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7221117117398916015}
   - component: {fileID: 122856428558792977}
   - component: {fileID: 7694346907070353954}
+  - component: {fileID: 7070145452484814688}
   m_Layer: 3
   m_Name: burBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,3 +145,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &7070145452484814688
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221117117398916000}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 3.2}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.3264718, y: -0.16138306}
+      - {x: 1.3739808, y: -0.13906908}
+      - {x: -1.2168794, y: 0.7879787}
+      - {x: -1.2223139, y: 0.788555}
+      - {x: -0.627172, y: -0.15249085}
+      - {x: -1.1390693, y: -0.999424}
+      - {x: 1.3264717, y: -0.17595726}
+      - {x: 1.3367642, y: -0.13676417}
+      - {x: 1.3253193, y: -0.16624121}

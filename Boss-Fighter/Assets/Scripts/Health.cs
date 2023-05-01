@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
-    [SerializeField] private GameObject pausePanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Time.timeScale = 0;
-            pausePanel.SetActive(true);
+            SceneManager.LoadScene("YouDieMenu");
         }
     }
 }

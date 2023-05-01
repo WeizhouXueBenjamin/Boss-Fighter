@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CameraShake
+  - Bullet
+  - PlayerBullet
+  - Boss
+  - TuStart
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - UI
   - Landform
   - Ground
-  - 
-  - 
+  - Boss
+  - Player
   - 
   - 
   - 

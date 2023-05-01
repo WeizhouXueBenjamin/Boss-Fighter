@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4738598882159083082}
   - component: {fileID: 4738598882159083063}
   - component: {fileID: 714202152772912823}
+  - component: {fileID: 7594596879270981367}
   m_Layer: 3
   m_Name: Bur
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,3 +145,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &7594596879270981367
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738598882159083083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008976221, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0441175

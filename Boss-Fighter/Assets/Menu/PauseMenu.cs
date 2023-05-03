@@ -11,7 +11,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button quitButton;
     bool is_paused = false;
-    int player_health = 100;
 
     void Start()
     {
@@ -32,11 +31,6 @@ public class PauseMenu : MonoBehaviour
             {
                 Resume();
             }
-        }
-
-        if(player_health <= 0)
-        {
-            SceneManager.LoadScene("YouDiedMenu");
         }
     }
 

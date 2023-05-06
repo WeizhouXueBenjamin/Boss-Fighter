@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3987997254819495051}
   - component: {fileID: 3987997254819495050}
   - component: {fileID: 1300310897552714196}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Blocker
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3987997254819495054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.93, y: -0.69, z: 0}
+  m_LocalPosition: {x: 18.8, y: -0.69, z: 0}
   m_LocalScale: {x: 2, y: 4.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -127,6 +127,8 @@ MonoBehaviour:
   timer: 0
   moveSpeed: 3
   deadZone: -28
+  maxHealth: 4
+  currentHealth: 0
 --- !u!61 &1300310897552714196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,9 +168,9 @@ GameObject:
   - component: {fileID: 3987997255609092816}
   - component: {fileID: 8821559972480096058}
   - component: {fileID: 861547406706669423}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: block
-  m_TagString: Bullet
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

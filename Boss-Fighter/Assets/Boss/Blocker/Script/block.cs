@@ -11,12 +11,14 @@ public class block : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float deadZone;
-    [SerializeField] private int blockHealth;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int currentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = blockLaser.GetComponent<Animator>();
+        currentHealth = maxHealth;
 
     }
 
@@ -24,15 +26,24 @@ public class block : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+
         if (timer >= coolDown)
         {
             animator.SetBool("start", true);
         }
-        if (transform.position.x < deadZone || blockHealth <= 0)
+        if (transform.position.x < deadZone || currentHealth <= 0)
         {
             Destroy(gameObject);
             Destroy(blocker.gameObject);
         }
         transform.localPosition -= (Vector3.right * moveSpeed) * Time.deltaTime;
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "PlayerBullet")
+        {
+            currentHealth -= 1;
+            Destroy(other.gameObject);
+        }
     }
 }

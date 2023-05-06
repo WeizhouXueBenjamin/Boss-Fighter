@@ -27,7 +27,7 @@ public class Tu : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, endPoint, speed * Time.deltaTime);
         transform.Rotate(new Vector3(0, 0, degrees * Time.deltaTime));
-        if (transform.position.x <= -20)
+        if (transform.position.x <= -27)
         {
             Destroy(gameObject);
         }

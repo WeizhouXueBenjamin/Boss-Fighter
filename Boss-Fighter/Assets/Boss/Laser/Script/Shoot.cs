@@ -52,8 +52,7 @@ public class Shoot : MonoBehaviour
 
         else if (timer >= fireTime)
         {
-            float set = 1.4f;
-            transform.localScale = new Vector3(length / set, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(20, transform.localScale.y, transform.localScale.z);
         }
 
         Vector2 endPosition = startPosition + length * direction;

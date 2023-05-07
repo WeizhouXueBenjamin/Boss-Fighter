@@ -4,33 +4,60 @@ using UnityEngine;
 
 public class BossBehaviour : StateMachineBehaviour
 {
+    [SerializeField] private int currtHealth;
     [SerializeField] private GameObject TuObject;
+    [SerializeField] private GameObject cannon;
     [SerializeField] private float timer;
     [SerializeField] private float tuCoolDown;
+    [SerializeField] private float CannonCoolDown;
     private GameObject tu;
+    private GameObject _cannon;
     Transform tuStart;
+    Transform cannonStart;
     private void Awake()
     {
         tuStart = GameObject.FindGameObjectWithTag("TuStart").transform;
+        cannonStart = GameObject.FindGameObjectWithTag("CanonStart").transform;
     }
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //Tu runtime
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("BossTu"))
         {
             tu = Instantiate(TuObject, tuStart.position, tuStart.rotation);
-            animator.ResetTrigger("Tu");
+            animator.SetBool("StartTu", false);
             timer = 0;
+        }
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Cannon"))
+        {
+            GameObject cannonball = Instantiate(cannon, cannonStart.transform.position, Quaternion.identity);
+            timer = 0;
+            //animator.SetBool("StartCa")
         }
     }
 
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        currtHealth = animator.GetComponent<BossHealth>().currentHealth;
         timer += Time.deltaTime;
-        if (timer >= tuCoolDown)
+        if (timer >= tuCoolDown && currtHealth > 50)
         {
-            animator.SetTrigger("Tu");
+            animator.SetBool("StartTu", true);
         }
+        //Check if should change stage
+        if (currtHealth < 50)
+        {
+            animator.SetBool("StartTu", false);
+            animator.SetBool("StartCannon", true);
+        }
+        if (timer >= CannonCoolDown && currtHealth < 50)
+        {
+            animator.Play("Cannon", -1, 0f);
+        }
+
+
+
     }
 
 

@@ -9,6 +9,7 @@ TagManager:
   - PlayerBullet
   - Boss
   - TuStart
+  - CanonStart
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Boss
   - Player
   - BossBullets
-  - 
+  - Cannon
   - 
   - 
   - 

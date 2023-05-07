@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene("YouDieMenu");
+            SceneManager.LoadScene("YouDied");
         }
     }
 }

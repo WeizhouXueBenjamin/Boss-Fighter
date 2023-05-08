@@ -53,7 +53,10 @@ public class BossBehaviour : StateMachineBehaviour
         }
         if (timer >= CannonCoolDown && currtHealth < 50)
         {
-            animator.Play("Cannon", -1, 0f);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Cannon"))
+            {
+                animator.Play("Cannon", -1, 0f);
+            }
         }
 
 

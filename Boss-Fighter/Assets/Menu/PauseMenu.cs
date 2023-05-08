@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         pausePanel.SetActive(false);
         resumeButton.onClick.AddListener(Resume);
         quitButton.onClick.AddListener(Back);
